@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import AllProjects from "./pages/AllProjects";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./component/ToTop";
-import NavBar from "./component/Navbar";
 import './App.css';
 
 const darkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -22,12 +21,14 @@ const themes = {
   },
 };
 
+
+
+
 export default function App() {
     return (
         <HashRouter>
                 <ScrollToTop />
                 <Element name={"Home"} id="home" >
-                    <NavBar/>
                 </Element>
                 <Routes>
                     <Route exact path="/" element={<Home />} />
